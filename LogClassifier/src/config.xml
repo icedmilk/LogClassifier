@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<value>
+		<!-- 
+			Recorders that to resolve, 
+			0 represents to resolve all the recorders 
+		-->
+		<RecorderCount>0</RecorderCount>
+	</value>
+	
+	<value>
+		<!-- 
+			whether prints the statistics or not 
+		-->
+		<Statistic>true</Statistic>
+	</value>
+	
+	<value>
+		<!-- 
+			The file path to read 
+		-->
+		<File>C:\Users\clu2\Downloads\error_log</File>
+	</value>
+	
+	
+	<value>
+		<!--
+			whether prints the resolved results 
+		-->
+		<ResolvedResults>true1</ResolvedResults>
+	</value>
+</configuration>
