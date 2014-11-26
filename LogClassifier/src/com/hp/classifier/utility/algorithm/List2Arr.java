@@ -1,4 +1,4 @@
-package com.hp.alg;
+package com.hp.classifier.utility.algorithm;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,13 @@
-package com.hp.alg;
+package com.hp.classifier.utility.algorithm;
 
 import java.util.ArrayList;
 
 public class LCS
 {
-	public static String alg(String x, String y)
+	public int len = 0;
+	public String[] str = null;
+
+	public String alg(String x, String y)
 	{
 		String result = new String();
 		int M = x.length();
@@ -42,8 +45,8 @@ public class LCS
 		}
 		return result;
 	}
-	
-	public static String[] alg_String(String[] x, String[] y)
+
+	public LCS alg_String(String[] x, String[] y)
 	{
 		ArrayList<String> result = new ArrayList<String>();
 		int M = x.length;
@@ -66,26 +69,48 @@ public class LCS
 
 		// recover LCS itself and print it to standard output
 		int i = 0, j = 0;
+		boolean addFlag = true;
 		while (i < M && j < N)
 		{
 			if (x[i].equals(y[j]))
 			{
+				addFlag = true;
 				result.add(x[i]);
 				i++;
 				j++;
 			}
 			else if (opt[i + 1][j] >= opt[i][j + 1])
+			{
+				if (addFlag)
+				{
+					result.add("*");
+					addFlag = false;
+				}
 				i++;
+
+			}
 			else
+			{
+				if (addFlag)
+				{
+					result.add("*");
+					addFlag = false;
+				}
+				result.add("*");
 				j++;
+			}
 		}
 		final int size = result.size();
 		String[] res = new String[size];
-		for(int k = 0; k < size; k++)
+		for (int k = 0; k < size; k++)
 		{
 			res[k] = result.get(k);
 		}
-		return res;
+		LCS lcs = new LCS();
+		lcs.len = opt[0][0];
+		lcs.str = res;
+		return lcs;
+
 	}
 
 }

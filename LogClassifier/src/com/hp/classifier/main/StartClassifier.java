@@ -1,7 +1,7 @@
-package com.hp.main;
+package com.hp.classifier.main;
 
-import com.hp.model.ResolveLog;
-import com.hp.xml.ConfigReader;
+import com.hp.classifier.utility.ConfigReader;
+import com.hp.classifier.utility.ResolveLog;
 
 public class StartClassifier
 {

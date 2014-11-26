@@ -1,4 +1,4 @@
-package com.hp.model;
+package com.hp.classifier.utility;
 
 public class CharStack
 {

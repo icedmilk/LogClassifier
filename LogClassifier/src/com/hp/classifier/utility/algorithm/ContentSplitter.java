@@ -1,9 +1,9 @@
-package com.hp.alg;
+package com.hp.classifier.utility.algorithm;
 
 import java.util.ArrayList;
 import java.util.Stack;
 
-import com.hp.model.CharStack;
+import com.hp.classifier.utility.CharStack;
 
 public class ContentSplitter
 {
